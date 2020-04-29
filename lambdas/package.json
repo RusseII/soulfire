@@ -1,0 +1,21 @@
+{
+    "scripts": {
+        "test": "node index.js",
+        "deploy": "rm -rf lambdaFunc.zip && yarn --prod && zip -r lambdaFunc.zip . && aws lambda update-function-code --function-name runescape --region us-east-2 --zip-file fileb://./lambdaFunc.zip"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "runescape-api": "^2.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-compat": "^3.5.1",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.18.3",
+        "prettier": "^1.19.1"
+    }
+}
