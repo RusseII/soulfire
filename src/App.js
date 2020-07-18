@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
 
     const getClanMembers = async () => {
-      const soulfireMembers = await fetch('https://api.russell.work/runescape')
+      const soulfireMembers = await fetch('/api/get-clan')
       const members = await soulfireMembers.json()
       const membersUpgrade = []
     
